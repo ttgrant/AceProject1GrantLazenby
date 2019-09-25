@@ -8,12 +8,20 @@ public class Patient  implements PatientADT{
 	private int totalACE;
 	private ArrayList<String> patientACE;
 	
-
+	
+	public Patient () {
+		totalACE = 0;
+		patientACE = new ArrayList<String>();
+	}
+	public Patient (String id) {
+		totalACE = 0;
+		patientACE = new ArrayList<String>();
+		setId(id);
+	}
+	
 	
 	public void setId(String id) {
 		this.id = id;
-		totalACE = 0;
-		patientACE = new ArrayList<String>();
 	}
 	
 	public void setId(String id, String name) {
@@ -62,6 +70,10 @@ public class Patient  implements PatientADT{
 		holder = patientACE;
 		return holder;
 	}
+	
+	public boolean equals (Object rhs) { // test for equality
+		 return id.contentEquals(((Patient) rhs).getId());
+		 }
  
 	public String toString()
 	{
@@ -71,9 +83,6 @@ public class Patient  implements PatientADT{
 		toReturn += i + ": " + obj + "\n";
 		i++;
 		}
-		
-		
-		
 		toReturn +="_______________________________________";
 		return toReturn;
 	}
