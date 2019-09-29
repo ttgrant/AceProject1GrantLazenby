@@ -138,7 +138,7 @@ public class AceDataManager  implements AceDataManagerADT{
 
 	public String toString()
 	{
-		String toReturn;
+		String toReturn = null;
 		for (Patient patient : AcePatientsList) {
 			toReturn = patient.toString();
 		}

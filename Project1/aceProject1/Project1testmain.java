@@ -1,5 +1,7 @@
 package aceProject1;
 
+import java.util.ArrayList;
+
 public class Project1testmain {
 
 	public static void main(String[] args) {
@@ -18,7 +20,11 @@ public class Project1testmain {
 		p1.addACE("Sexual abuse");
 		p1.addACE("Emotional abuse");
 		p1.addACE("Physical neglect");
+		p2.addACE("Physical neglect");
+		p3.addACE("Physical neglect");
 		p1.addACE("Emotional neglect");
+		p3.addACE("Emotional neglect");
+		p3.addACE("Exposure to domestic violence");
 		p1.addACE("Exposure to domestic violence");
 		System.out.println(p1);
 		p1.addACE("Exposure to domestic violence");
@@ -33,6 +39,14 @@ public class Project1testmain {
 		PM1.addPatient(p2);
 		PM1.addPatient(p3);
 		PM1.writeToFile("./aceProject1/PatientFile");
+		
+		System.out.println(PM1.getRiskFactors(p1.getACEs()));
+		System.out.println(PM1.getRiskFactors(p2.getACEs()));
+		System.out.println(PM1.getRiskFactors(p3.getACEs()));
+				//new ArrayList<String>();
+		
+		
+		
 		
 		
 		
